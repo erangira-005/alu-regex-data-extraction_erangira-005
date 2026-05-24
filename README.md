@@ -29,13 +29,13 @@ bash
 python src/main.py
 
 
-The results will be printed in the terminal and saved to `output/sample-output.json`.
+The results will be printed in the terminal and saved to output/sample-output.json.
 
 
 
 ## What the Program Does
 
-1. Reads the raw text from `input/raw-text.txt`
+1. Reads the raw text from input/raw-text.txt
 2. Searches through the text using regex patterns
 3. Validates each match — rejecting anything that looks suspicious
 4. Prints the results to the terminal
@@ -60,9 +60,9 @@ Pattern used:
 
 
 ### 2. Phone Numbers
-Finds international phone numbers that start with a `+` country code.
+Finds international phone numbers that start with a + country code.
 
-Examples matched: `+250 788 123 456`, `+1 (555) 867-5309`, `+1-800-555-0199`
+Examples matched: +250 788 123 456, +1 (555) 867-5309, +1-800-555-0199
 
 Pattern used:
 
@@ -72,7 +72,7 @@ Pattern used:
 ### 3. Credit Card Numbers
 Finds 16-digit card numbers written in groups of 4, separated by spaces or hyphens.
 
-Example matched: `4111 1111 1111 1111`
+Example matched: 4111 1111 1111 1111
 
 For security, card numbers are always masked in the output — only the last 4 digits are shown: XXXX-XXXX-XXXX-1111
 
@@ -128,7 +128,7 @@ The program does not automatically trust the input. Before accepting any match, 
 - <script   —  JavaScript / XSS injection
 - javascript:` — dangerous URL scheme
 
-Any match that contains these patterns is moved to a `rejected` list instead of the valid results.
+Any match that contains these patterns is moved to a rejected list instead of the valid results.
 
 Credit card numbers are never stored or printed in their raw form — they are always masked before being added to any output.
 
