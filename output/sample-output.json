@@ -1,0 +1,18 @@
+{
+  "emails": {
+    "alu_staff": [],
+    "alu_alumni": [],
+    "alu_si": [],
+    "external": [],
+    "rejected": []
+  },
+  "phones": {
+    "valid": [],
+    "rejected": []
+  },
+  "credit_cards": {
+    "valid": [],
+    "rejected": []
+  },
+  "currency": []
+}
