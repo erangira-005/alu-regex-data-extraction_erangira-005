@@ -6,7 +6,7 @@ A Python program that reads a raw text file and uses regular expressions to extr
 
 ## Project Structure
 
-
+```
 alu-regex-data-extraction_student/
 ├── input/
 │   └── raw-text.txt          # The raw text the program reads from
@@ -15,7 +15,7 @@ alu-regex-data-extraction_student/
 ├── output/
 │   └── sample-output.json    # The results after running the program
 └── README.md
-
+```
 
 
 
@@ -74,7 +74,7 @@ Finds 16-digit card numbers written in groups of 4, separated by spaces or hyphe
 
 Example matched: `4111 1111 1111 1111`
 
-For security, card numbers are **always masked** in the output — only the last 4 digits are shown: `XXXX-XXXX-XXXX-1111`
+For security, card numbers are always masked in the output — only the last 4 digits are shown: XXXX-XXXX-XXXX-1111
 
 Pattern used:
 
@@ -84,9 +84,9 @@ Pattern used:
 ### 4. Currency Amounts
 Finds amounts with a currency symbol in front of them.
 
-Symbols supported: `$` `£` `€` `₦`
+Symbols supported: $,£,€,₦
 
-Examples matched: `$1,250.00`, `£450.00`, `₦75,000.00`
+Examples matched: $1,250.00, £450.00, ₦75,000.00
 
 Pattern used:
 
