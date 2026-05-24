@@ -1,12 +1,12 @@
-# ALU Regex Data Extraction & Validation
+# Regex Data Extraction & Validation
 
 A Python program that reads a raw text file and uses regular expressions to extract and validate four types of structured data: email addresses, phone numbers, credit card numbers, and currency amounts.
 
----
+
 
 ## Project Structure
 
-```
+
 alu-regex-data-extraction_student/
 ├── input/
 │   └── raw-text.txt          # The raw text the program reads from
@@ -15,9 +15,9 @@ alu-regex-data-extraction_student/
 ├── output/
 │   └── sample-output.json    # The results after running the program
 └── README.md
-```
 
----
+
+
 
 ## How to Run
 
@@ -25,13 +25,13 @@ Make sure you have Python 3 installed. No extra libraries are needed.
 
 Open your terminal, navigate to the project folder, and run:
 
-```bash
+bash
 python src/main.py
-```
+
 
 The results will be printed in the terminal and saved to `output/sample-output.json`.
 
----
+
 
 ## What the Program Does
 
@@ -41,7 +41,6 @@ The results will be printed in the terminal and saved to `output/sample-output.j
 4. Prints the results to the terminal
 5. Saves everything into a JSON file
 
----
 
 ## Data Types Extracted
 
@@ -56,9 +55,9 @@ Finds all email addresses in the text and sorts them into four categories:
 | `external` | Any other valid email |
 
 Pattern used:
-```
+
 [a-zA-Z0-9._+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}
-```
+
 
 ### 2. Phone Numbers
 Finds international phone numbers that start with a `+` country code.
@@ -66,9 +65,9 @@ Finds international phone numbers that start with a `+` country code.
 Examples matched: `+250 788 123 456`, `+1 (555) 867-5309`, `+1-800-555-0199`
 
 Pattern used:
-```
+
 \+\d{1,3}[\s\-.]?(\(\d{1,4}\)[\s\-.]?)?\d{3,5}[\s\-.]\d{3,5}([\s\-.]\d{3,4})?
-```
+
 
 ### 3. Credit Card Numbers
 Finds 16-digit card numbers written in groups of 4, separated by spaces or hyphens.
@@ -78,9 +77,9 @@ Example matched: `4111 1111 1111 1111`
 For security, card numbers are **always masked** in the output — only the last 4 digits are shown: `XXXX-XXXX-XXXX-1111`
 
 Pattern used:
-```
+
 \b\d{4}[\s\-]\d{4}[\s\-]\d{4}[\s\-]\d{4}\b
-```
+
 
 ### 4. Currency Amounts
 Finds amounts with a currency symbol in front of them.
@@ -90,11 +89,9 @@ Symbols supported: `$` `£` `€` `₦`
 Examples matched: `$1,250.00`, `£450.00`, `₦75,000.00`
 
 Pattern used:
-```
-[$£€₦]\d{1,3}(,\d{3})*(\.\d{2})?
-```
 
----
+[$£€₦]\d{1,3}(,\d{3})*(\.\d{2})?
+
 
 ## Regex Building Blocks Used
 
@@ -128,7 +125,7 @@ The program does not automatically trust the input. Before accepting any match, 
 
 - -- and OR 1=1 — SQL injection
 - DROP TABLE — SQL injection
-- <script  — JavaScript / XSS injection
+- <script   —  JavaScript / XSS injection
 - javascript:` — dangerous URL scheme
 
 Any match that contains these patterns is moved to a `rejected` list instead of the valid results.
